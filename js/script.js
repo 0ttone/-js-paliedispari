@@ -7,7 +7,7 @@
 var parolaUtente = prompt('Inserisci una parola');
 var lunghezzaParola = parolaUtente.length;
 
-alert(parolaUtente)
+//alert(parolaUtente)
 
 //l idea è quella di richiamare tramite [] ogni singola lettera
 //della parola che in sostanza ad ogni istanza [0], [1] e cosi via 
@@ -20,11 +20,18 @@ alert(parolaUtente)
 
 
 // la i però sarà la lunghezza della parola
-for (var i = (lunghezzaParola - 1); i >=0; i++)
+var stringa = ""
+for (var i = (lunghezzaParola - 1); i >=0; i--)
 {
-      alert(parolaUtente[i])
+      stringa += parolaUtente[i]
+      //alert(parolaUtente[i])
 }
-
+alert(stringa)
+ 
+//tutta la parte sopra ora è di fatto un generatore
+//di palindromi
+//se inserita in una function e cambiando argomento
+//con parolautente possiamo completare la richiesta
 
 
 
