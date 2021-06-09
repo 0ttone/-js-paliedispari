@@ -20,18 +20,41 @@ var lunghezzaParola = parolaUtente.length;
 
 
 // la i però sarà la lunghezza della parola
-var stringa = ""
-for (var i = (lunghezzaParola - 1); i >=0; i--)
-{
-      stringa += parolaUtente[i]
-      //alert(parolaUtente[i])
-}
-alert(stringa)
+// var stringa = ""
+// for (var i = (lunghezzaParola - 1); i >=0; i--)
+// {
+//       stringa += parolaUtente[i]
+//       //alert(parolaUtente[i])
+// }
+// alert(stringa)
  
 //tutta la parte sopra ora è di fatto un generatore
 //di palindromi
-//se inserita in una function e cambiando argomento
+//se inserita in una function e cambiando argomento (parola)
 //con parolautente possiamo completare la richiesta
+
+function palindromo (parola)
+{     
+      var lunghezzaParola = parola.length;
+      var stringa = ""
+      for (var i = (lunghezzaParola - 1); i >=0; i--)
+      {
+            stringa += parola[i]
+            
+      }  
+      return stringa;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
