@@ -4,8 +4,7 @@
 
 //inserimento parola richiesta con prompt
 
-var parolaUtente = prompt('Inserisci una parola');
-var lunghezzaParola = parolaUtente.length;
+
 
 //alert(parolaUtente)
 
@@ -36,15 +35,51 @@ var lunghezzaParola = parolaUtente.length;
 function palindromo (parola)
 {     
       var lunghezzaParola = parola.length;
-      var stringa = ""
+      var stringa = "";
       for (var i = (lunghezzaParola - 1); i >=0; i--)
       {
-            stringa += parola[i]
+            stringa += parola[i];
             
       }  
-      return stringa;
 
-}
+      console.log(stringa);
+      //return stringa; NON CHIUDIAMO LA function
+      //controlliamo all interno se è palindroma con if
+
+      if (parola === stringa) {
+            
+            return true;
+      
+      }     else {
+            
+            return false;
+      }
+}   
+
+      var parolaUtente = prompt("Inserisci una parola");
+      var lunghezzaParola = parolaUtente.length;
+      document.getElementsByClassName("parola-inserita")[0].innerHTML = parolaUtente;
+      
+
+      
+      //ORA  sfruttando la function scriviamo se la parola inserita è o
+      // non è un palindromo
+
+      var palindromaHtmlElement = document.getElementsByClassName("palindroma-utente")[0];
+
+
+      if (palindromo (parolaUtente)){
+            palindromaHtmlElement.innerHTML = 'La parola è un palindromo';
+      
+      } else {
+            palindromaHtmlElement.innerHTML = 'La parola non è un palindromo';
+      }
+
+      
+
+
+
+
 
 
 
@@ -73,4 +108,9 @@ function getRandomNumber(){
              return randomNumber;
        }
 
-var userNumber = (prompt('Inserisci un numero')); 
+
+
+var cpuNumber = getRandomNumber()
+
+
+var userNumber = parseInt(prompt('Inserisci un numero')); 
